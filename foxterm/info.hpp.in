@@ -1,0 +1,12 @@
+#pragma once
+
+// clang-format off
+
+// version
+#define FOXTERM_VERSION_MAJOR @foxterm_VERSION_MAJOR@
+#define FOXTERM_VERSION_MINOR @foxterm_VERSION_MINOR@
+#define FOXTERM_VERSION_PATCH @foxterm_VERSION_PATCH@
+// complete version string
+#define FOXTERM_VERSION_STRING "V@foxterm_VERSION_MAJOR@.@foxterm_VERSION_MINOR@.@foxterm_VERSION_PATCH@"
+
+#define FOXTERM_HOMEPAGE_URL "@foxterm_HOMEPAGE_URL@"

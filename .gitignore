@@ -30,3 +30,37 @@
 *.exe
 *.out
 *.app
+
+# Additional files of many editors
+build/
+.vscode/
+.vs/
+CMakeSettings.json
+*.sln
+*.vcxitems
+*.vcxproj
+*.filters
+Debug/
+out/
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+cmake-build-release/
+cmake-build-release-visual-studio/
+cmake-build-release-cygwin/
+cmake-build-debug/
+cmake-build-debug-visual-studio/
+cmake-build-debug-cygwin/
+.idea/
+*.a
+cmake-build-minsizerel/
+cmake-build-relwithdebinfo/
+cmake-build-debug-mingw/
+cmake-build-default/
+cmake-build-debug-clang/
+Makefile
+*.cbp
+
+# optional
+.devcontainer/
+imgui.ini
