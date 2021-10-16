@@ -58,7 +58,7 @@ std::string get_color4(Color4_bg);
 std::string get_color4(Color4_fg);
 
 // resets all Style and color modifiers in the terminal
-std::string reset();
+const char *reset();
 
 /* takes a value from 0 to 255 and returns it's 8 bit ANSI code, foreground
  * color only 0 -   7: default colors as in Color4_fg 8 -  15: bright colors as

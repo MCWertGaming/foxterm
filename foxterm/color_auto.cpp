@@ -4,6 +4,7 @@
 
 bool Foxterm::support_bit24() {
   // TODO: Windows
+  // fix as you can't make a string out of a nullptr
   if (std::getenv("COLORTERM") == nullptr)
     return false;
   else if ((std::string)std::getenv("COLORTERM") == "truecolor")

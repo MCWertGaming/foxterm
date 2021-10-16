@@ -16,5 +16,5 @@ uint8_t convert_bit24_bit8_bright(uint8_t, uint8_t, uint8_t);
 // least close brighter version
 uint8_t convert_bit24_bit8_bright(RGB);
 // converts a hexadecimal RGB color code to a RGB struct
-RGB convert_hex_rgb(const char*);
+RGB convert_hex_rgb(const char *);
 } // namespace Foxterm
