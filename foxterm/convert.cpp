@@ -1,26 +1,26 @@
 #include "convert.hpp"
 #include <stdexcept>
 
-uint8_t Foxterm::convert_bit24_bit8_dark(uint8_t r, uint8_t g, uint8_t b) {
+uint8_t Fterm::convert_bit24_bit8_dark(uint8_t r, uint8_t g, uint8_t b) {
   return 16 + (36 * (r / 51)) + (6 * (g / 51)) + (b / 51);
 }
-uint8_t Foxterm::convert_bit24_bit8_dark(RGB rgb) {
+uint8_t Fterm::convert_bit24_bit8_dark(RGB rgb) {
   return 16 + (36 * (rgb.r / 51)) + (6 * (rgb.g / 51)) + (rgb.b / 51);
 }
-uint8_t Foxterm::convert_bit24_bit8_bright(uint8_t r, uint8_t g, uint8_t b) {
+uint8_t Fterm::convert_bit24_bit8_bright(uint8_t r, uint8_t g, uint8_t b) {
   return 16 + (r * 6 / 256) * 36 + (g * 6 / 256) * 6 + (b * 6 / 256);
 }
-uint8_t Foxterm::convert_bit24_bit8_bright(RGB rgb) {
+uint8_t Fterm::convert_bit24_bit8_bright(RGB rgb) {
   return 16 + (rgb.r * 6 / 256) * 36 + (rgb.g * 6 / 256) * 6 +
          (rgb.b * 6 / 256);
 }
-Foxterm::RGB Foxterm::convert_hex_rgb(const char *hex_code) {
+Fterm::RGB Fterm::convert_hex_rgb(const char *hex_code) {
   // FF FF FF
   std::string hex_code_str = hex_code;
   // check if the given string has the right size
   if (hex_code_str.size() != 6)
     throw std::runtime_error(
-        "Foxterm::convert_hex_rgb(): invalid hex code length");
+        "Fterm::convert_hex_rgb(): invalid hex code length");
   // check if the given string has the right characters
   for (uint8_t i = 0; i < 6; i++) {
     if (hex_code[i] != 'A' && hex_code[i] != 'B' && hex_code[i] != 'C' &&
@@ -30,7 +30,7 @@ Foxterm::RGB Foxterm::convert_hex_rgb(const char *hex_code) {
         hex_code[i] != '6' && hex_code[i] != '7' && hex_code[i] != '8' &&
         hex_code[i] != '9')
       throw std::runtime_error(
-          "Foxterm::convert_hex_rgb(): invalid hex code characters");
+          "Fterm::convert_hex_rgb(): invalid hex code characters");
   }
   RGB rgb_struct;
   // set red color

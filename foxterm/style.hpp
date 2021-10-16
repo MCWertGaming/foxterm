@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace Foxterm {
+namespace Fterm {
 // Codes for formating text using ANSI, work on every terminal out there
 enum class Style {
   // resets everything
@@ -101,12 +101,12 @@ enum class Style_unsupported {
   // disables super- and subscript modifiers
   disable_super_subscript = 75
 };
-// takes Foxterm::Style as argument and returns it's ANSI code, recommended
+// takes Fterm::Style as argument and returns it's ANSI code, recommended
 std::string get_style(Style);
-// takes Foxterm::Style_extra as argument and returns it's ANSI code, only use
+// takes Fterm::Style_extra as argument and returns it's ANSI code, only use
 // it if the effect is not that important
 std::string get_style(Style_extra);
-// takes Foxterm::Style_unsupported as argument and returns it's ANSI code, not
+// takes Fterm::Style_unsupported as argument and returns it's ANSI code, not
 // recommended
 std::string get_style(Style_unsupported);
-} // namespace Foxterm
+} // namespace Fterm

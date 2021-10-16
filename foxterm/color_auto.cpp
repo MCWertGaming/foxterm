@@ -2,7 +2,7 @@
 #include "convert.hpp"
 #include <iostream>
 
-bool Foxterm::support_bit24() {
+bool Fterm::support_bit24() {
   // TODO: Windows
   // fix as you can't make a string out of a nullptr
   if (std::getenv("COLORTERM") == nullptr)
@@ -12,7 +12,7 @@ bool Foxterm::support_bit24() {
   return false;
 }
 
-Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
+Fterm::Color_set Fterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
                                                uint8_t bit8_fg, uint8_t bit8_bg,
                                                Color4_fg bit4_fg,
                                                Color4_bg bit4_bg) {
@@ -25,7 +25,7 @@ Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
                    Colors_available::all,
                    Colors_available::all};
 }
-Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
+Fterm::Color_set Fterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
                                                Color4_fg bit4_fg,
                                                Color4_bg bit4_bg) {
   return Color_set{rgb_fg,
@@ -37,7 +37,7 @@ Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg,
                    Colors_available::all,
                    Colors_available::all};
 }
-Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg) {
+Fterm::Color_set Fterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg) {
   return Color_set{rgb_fg,
                    rgb_bg,
                    convert_bit24_bit8_dark(rgb_fg.r, rgb_fg.g, rgb_fg.b),
@@ -47,13 +47,13 @@ Foxterm::Color_set Foxterm::init_color_set_all(RGB rgb_fg, RGB rgb_bg) {
                    Colors_available::bit8_24,
                    Colors_available::bit8_24};
 }
-Foxterm::Color_set Foxterm::init_color_set_all(Color4_fg bit4_fg,
+Fterm::Color_set Fterm::init_color_set_all(Color4_fg bit4_fg,
                                                Color4_bg bit4_bg) {
   return Color_set{
       make_rgb(0, 0, 0),      make_rgb(0, 0, 0),     0, 0, bit4_fg, bit4_bg,
       Colors_available::bit4, Colors_available::bit4};
 }
-Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg, uint8_t bit8_fg,
+Fterm::Color_set Fterm::init_color_set_fg(RGB rgb_fg, uint8_t bit8_fg,
                                               Color4_fg bit4_fg) {
   return Color_set{rgb_fg,
                    make_rgb(0, 0, 0),
@@ -64,7 +64,7 @@ Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg, uint8_t bit8_fg,
                    Colors_available::all,
                    Colors_available::none};
 }
-Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg, Color4_fg bit4_fg) {
+Fterm::Color_set Fterm::init_color_set_fg(RGB rgb_fg, Color4_fg bit4_fg) {
   return Color_set{rgb_fg,
                    make_rgb(0, 0, 0),
                    convert_bit24_bit8_dark(rgb_fg.r, rgb_fg.g, rgb_fg.b),
@@ -74,7 +74,7 @@ Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg, Color4_fg bit4_fg) {
                    Colors_available::all,
                    Colors_available::none};
 }
-Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg) {
+Fterm::Color_set Fterm::init_color_set_fg(RGB rgb_fg) {
   return Color_set{rgb_fg,
                    make_rgb(0, 0, 0),
                    convert_bit24_bit8_dark(rgb_fg.r, rgb_fg.g, rgb_fg.b),
@@ -85,7 +85,7 @@ Foxterm::Color_set Foxterm::init_color_set_fg(RGB rgb_fg) {
                    Colors_available::none};
 }
 
-Foxterm::Color_set Foxterm::init_color_set_fg(Color4_fg bit4_fg) {
+Fterm::Color_set Fterm::init_color_set_fg(Color4_fg bit4_fg) {
   return Color_set{make_rgb(0, 0, 0),
                    make_rgb(0, 0, 0),
                    0,
@@ -95,7 +95,7 @@ Foxterm::Color_set Foxterm::init_color_set_fg(Color4_fg bit4_fg) {
                    Colors_available::bit4,
                    Colors_available::none};
 }
-Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg, uint8_t bit8_bg,
+Fterm::Color_set Fterm::init_color_set_bg(RGB rgb_bg, uint8_t bit8_bg,
                                               Color4_bg bit4_bg) {
   return Color_set{make_rgb(0, 0, 0),
                    rgb_bg,
@@ -106,7 +106,7 @@ Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg, uint8_t bit8_bg,
                    Colors_available::none,
                    Colors_available::all};
 }
-Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg, Color4_bg bit4_bg) {
+Fterm::Color_set Fterm::init_color_set_bg(RGB rgb_bg, Color4_bg bit4_bg) {
   return Color_set{make_rgb(0, 0, 0),
                    rgb_bg,
                    0,
@@ -116,7 +116,7 @@ Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg, Color4_bg bit4_bg) {
                    Colors_available::none,
                    Colors_available::all};
 }
-Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg) {
+Fterm::Color_set Fterm::init_color_set_bg(RGB rgb_bg) {
   return Color_set{make_rgb(0, 0, 0),
                    rgb_bg,
                    0,
@@ -126,7 +126,7 @@ Foxterm::Color_set Foxterm::init_color_set_bg(RGB rgb_bg) {
                    Colors_available::none,
                    Colors_available::bit8_24};
 }
-Foxterm::Color_set Foxterm::init_color_set_bg(Color4_bg bit4_bg) {
+Fterm::Color_set Fterm::init_color_set_bg(Color4_bg bit4_bg) {
   return Color_set{make_rgb(0, 0, 0),
                    make_rgb(0, 0, 0),
                    0,
@@ -136,7 +136,7 @@ Foxterm::Color_set Foxterm::init_color_set_bg(Color4_bg bit4_bg) {
                    Colors_available::none,
                    Colors_available::bit4};
 }
-Foxterm::Color_set Foxterm::init_color_set_none() {
+Fterm::Color_set Fterm::init_color_set_none() {
   return Color_set{make_rgb(0, 0, 0),
                    make_rgb(0, 0, 0),
                    0,
@@ -146,7 +146,7 @@ Foxterm::Color_set Foxterm::init_color_set_none() {
                    Colors_available::none,
                    Colors_available::none};
 }
-std::string Foxterm::get_color_auto(Color_set col_set) {
+std::string Fterm::get_color_auto(Color_set col_set) {
   std::string ansi_code = "";
 
   // foreground color
@@ -174,7 +174,7 @@ std::string Foxterm::get_color_auto(Color_set col_set) {
   return ansi_code;
 }
 
-std::string Foxterm::get_color_auto(Color_set col_set, Color_use color_max) {
+std::string Fterm::get_color_auto(Color_set col_set, Color_use color_max) {
   std::string ansi_code = "";
 
   // foreground color

@@ -1,7 +1,7 @@
 #pragma once
 #include "color.hpp"
 
-namespace Foxterm {
+namespace Fterm {
 
 // indicates the color support by a color set
 enum class Colors_available { none, bit4, bit8_24, all };
@@ -74,4 +74,4 @@ std::string get_color_auto(Color_set);
 // returns the highest available and supported color by the user's system, the
 // maximum used color is overriden manually
 std::string get_color_auto(Color_set col_set, Color_use color_max);
-} // namespace Foxterm
+} // namespace Fterm

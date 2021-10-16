@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace Foxterm {
+namespace Fterm {
 std::string cursor_up(uint16_t);
 std::string cursor_down(uint16_t);
 std::string cursor_forward(uint16_t);
@@ -32,4 +32,4 @@ const char *disable_alternative_buffer();
 const char *enable_backet_paste();
 const char *disable_bracket_paste();
 
-} // namespace Foxterm
+} // namespace Fterm

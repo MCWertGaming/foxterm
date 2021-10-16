@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace Foxterm {
+namespace Fterm {
 // 4 bit foreground colors for formating text using ANSI
 enum class Color4_fg {
   reset = 39,
@@ -52,9 +52,9 @@ struct RGB {
 // creates RGB struct from r g b values
 RGB make_rgb(uint8_t, uint8_t, uint8_t);
 
-// takes Foxterm::Color4_bg as argument and returns it's ANSI code
+// takes Fterm::Color4_bg as argument and returns it's ANSI code
 std::string get_color4(Color4_bg);
-// takes Foxterm::Color4_fg as argument and returns it's ANSI code
+// takes Fterm::Color4_fg as argument and returns it's ANSI code
 std::string get_color4(Color4_fg);
 
 // resets all Style and color modifiers in the terminal
@@ -105,4 +105,4 @@ std::string get_color24_underline(uint8_t, uint8_t, uint8_t);
 // takes a value from 0 to 255 for each R G B argument and returns it's 24 bit
 // ANSI code, underline color only
 std::string get_color24_underline(RGB);
-} // namespace Foxterm
+} // namespace Fterm
