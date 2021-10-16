@@ -46,6 +46,15 @@ TEST(base_test, style_test) {
   EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::framed), "\033[51m");
   EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::overlined), "\033[53m");
   EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::proportional_spacing), "\033[26m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::ideogram_underline), "\033[60m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::ideogram_underline_double), "\033[61m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::ideogram_overline), "\033[62m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::ideogram_double_overline), "\033[63m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::ideogram_stress), "\033[64m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::disable_ideogram), "\033[65m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::superscript), "\033[73m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::subscript), "\033[74m");
+  EXPECT_EQ(Foxterm::get_style(Foxterm::Style_unsupported::disable_super_subscript), "\033[75m");
 }
 
 TEST(base_test, 4bit_color_test) {

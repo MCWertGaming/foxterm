@@ -45,8 +45,15 @@ int main()
     std::cout << Foxterm::get_style(Foxterm::Style_unsupported::framed) << "framed" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
     std::cout << Foxterm::get_style(Foxterm::Style_unsupported::overlined) << "overlined" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
     std::cout << Foxterm::get_style(Foxterm::Style_unsupported::proportional_spacing) << "proportional-spacing" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::ideogram_double_overline) << "ideogram_double_overline" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::ideogram_overline) << "ideogram_overline" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::ideogram_stress) << "ideogram_stress" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::ideogram_underline) << "ideogram_underline" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::ideogram_underline_double) << "ideogram_underline_double" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::subscript) << "subscript" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
+    std::cout << Foxterm::get_style(Foxterm::Style_unsupported::superscript) << "superscript" << Foxterm::get_style(Foxterm::Style::reset) << '\n';
 
-    std::cout << "4bit colors\n";
+    std::cout << "\n4bit colors\n";
     std::cout << "-----------\n";
     std::cout << Foxterm::get_color4(Foxterm::Color4_fg::black) << "BLACK         " << Foxterm::get_color4(Foxterm::Color4_fg::reset) << " " << Foxterm::get_color4(Foxterm::Color4_bg::black) << "     " << Foxterm::get_color4(Foxterm::Color4_bg::reset) << "\n";
     std::cout << Foxterm::get_color4(Foxterm::Color4_fg::blue) << "BLUE          " << Foxterm::get_color4(Foxterm::Color4_fg::reset) << " " << Foxterm::get_color4(Foxterm::Color4_bg::blue) << "     " << Foxterm::get_color4(Foxterm::Color4_bg::reset) << "\n";

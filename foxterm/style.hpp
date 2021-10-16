@@ -84,6 +84,22 @@ enum class Style_unsupported {
   disable_framed_encircled = 54,
   // disable overlined
   disable_overline = 55,
+  // ideogram underline, sometimes right side line
+  ideogram_underline = 60,
+  // double ideogram underline, sometimes double right side line
+  ideogram_underline_double = 61,
+  // ideogram overline, sometimes left line
+  ideogram_overline = 62,
+  // double ideogram overline, sometimes double left line
+  ideogram_double_overline = 63,
+  // ideogram stress marking
+  ideogram_stress = 64,
+  // disable all ideogram modifiers
+  disable_ideogram = 65,
+  superscript = 73,
+  subscript = 74,
+  // disables super- and subscript modifiers
+  disable_super_subscript = 75
 };
 // takes Foxterm::Style as argument and returns it's ANSI code, recommended
 std::string get_style(Style);
