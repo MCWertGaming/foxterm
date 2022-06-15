@@ -3,7 +3,7 @@
 #include <string>
 
 namespace Fterm {
-// 4 bit foreground colors for formating text using ANSI
+// 4 bit foreground colors for formatting text using ANSI
 enum class Color4_fg {
   reset = 39,
   black = 30,
@@ -23,7 +23,7 @@ enum class Color4_fg {
   cyan_bright = 96,
   white_bright = 97,
 };
-// 4 bit background colors for formating text using ANSI
+// 4 bit background colors for formatting text using ANSI
 enum class Color4_bg {
   reset = 49,
   black = 40,
@@ -52,9 +52,9 @@ struct RGB {
 // creates RGB struct from r g b values
 RGB make_rgb(uint8_t, uint8_t, uint8_t);
 
-// takes Fterm::Color4_bg as argument and returns it's ANSI code
+// takes Fterm::Color4_bg as argument and returns its ANSI code
 std::string get_color4(Color4_bg);
-// takes Fterm::Color4_fg as argument and returns it's ANSI code
+// takes Fterm::Color4_fg as argument and returns its ANSI code
 std::string get_color4(Color4_fg);
 
 // resets all Style and color modifiers in the terminal

@@ -2,7 +2,7 @@
 #include <string>
 
 namespace Fterm {
-// Codes for formating text using ANSI, work on every terminal out there
+// Codes for formatting text using ANSI, work on every terminal out there
 enum class Style {
   // resets everything
   reset = 0,
@@ -22,7 +22,7 @@ enum class Style {
   disable_invert = 27,
 };
 
-// Codes for formating text using ANSI, work on most terminals out there
+// Codes for formatting text using ANSI, work on most terminals out there
 enum class Style_extra {
   underline = 4,
   // hides the text, not widely supported
@@ -36,10 +36,10 @@ enum class Style_extra {
   // reveals text with the hidden modifier
   reveal = 28,
   // disables crossed out
-  dissable_strike = 29,
+  disable_strike = 29,
 };
 
-// Codes for formating text using ANSI, work barely on terminals but are
+// Codes for formatting text using ANSI, work barely on terminals but are
 // specified by the ANSI standard
 enum class Style_unsupported {
   // less than 150 blinks per minute
@@ -79,10 +79,10 @@ enum class Style_unsupported {
   // draw text inside a circle, sometimes emoji selector
   encircled = 52,
   // draw line above text
-  overlined = 53,
+  over_lined = 53,
   // disables framed and encircled
   disable_framed_encircled = 54,
-  // disable overlined
+  // disable over-lined
   disable_overline = 55,
   // ideogram underline, sometimes right side line
   ideogram_underline = 60,
@@ -101,12 +101,12 @@ enum class Style_unsupported {
   // disables super- and subscript modifiers
   disable_super_subscript = 75
 };
-// takes Fterm::Style as argument and returns it's ANSI code, recommended
+// takes Fterm::Style as argument and returns its ANSI code, recommended
 std::string get_style(Style);
-// takes Fterm::Style_extra as argument and returns it's ANSI code, only use
+// takes Fterm::Style_extra as argument and returns its ANSI code, only use
 // it if the effect is not that important
 std::string get_style(Style_extra);
-// takes Fterm::Style_unsupported as argument and returns it's ANSI code, not
+// takes Fterm::Style_unsupported as argument and returns its ANSI code, not
 // recommended
 std::string get_style(Style_unsupported);
 } // namespace Fterm

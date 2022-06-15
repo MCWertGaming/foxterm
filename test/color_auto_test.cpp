@@ -271,7 +271,7 @@ TEST(color_auto_test, auto_color_all) {
   else
     EXPECT_EQ(Fterm::get_color_auto(col_set, Fterm::Color_use::bit24),
               "\033[38;5;30m\033[48;5;35m");
-  // overriden to 8 bit
+  // override to 8 bit
   EXPECT_EQ(Fterm::get_color_auto(col_set, Fterm::Color_use::bit8),
             "\033[38;5;30m\033[48;5;35m");
   // overridden to 4 bit
@@ -295,7 +295,7 @@ TEST(color_auto_test, auto_color_limited_rgb) {
   else
     EXPECT_EQ(Fterm::get_color_auto(col_set, Fterm::Color_use::bit24),
               "\033[38;5;196m\033[48;5;196m");
-  // overriden to 8 bit
+  // override to 8 bit
   EXPECT_EQ(Fterm::get_color_auto(col_set, Fterm::Color_use::bit8),
             "\033[38;5;196m\033[48;5;196m");
   // overridden to 4 bit

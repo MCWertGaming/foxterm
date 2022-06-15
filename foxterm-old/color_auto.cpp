@@ -1,6 +1,5 @@
 #include "color_auto.hpp"
 #include "convert.hpp"
-#include <iostream>
 
 bool Fterm::support_bit24() {
   // TODO: Windows
@@ -147,7 +146,7 @@ Fterm::Color_set Fterm::init_color_set_none() {
                    Colors_available::none};
 }
 std::string Fterm::get_color_auto(Color_set col_set) {
-  std::string ansi_code = "";
+  std::string ansi_code;
 
   // foreground color
   if (col_set.colors_available_fg == Colors_available::all ||
@@ -175,7 +174,7 @@ std::string Fterm::get_color_auto(Color_set col_set) {
 }
 
 std::string Fterm::get_color_auto(Color_set col_set, Color_use color_max) {
-  std::string ansi_code = "";
+  std::string ansi_code;
 
   // foreground color
   if ((col_set.colors_available_fg == Colors_available::all ||

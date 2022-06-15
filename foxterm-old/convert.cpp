@@ -32,7 +32,7 @@ Fterm::RGB Fterm::convert_hex_rgb(const char *hex_code) {
       throw std::runtime_error(
           "Fterm::convert_hex_rgb(): invalid hex code characters");
   }
-  RGB rgb_struct;
+  RGB rgb_struct{};
   // set red color
   if (hex_code[0] == 'A' || hex_code[0] == 'B' || hex_code[0] == 'C' ||
       hex_code[0] == 'D' || hex_code[0] == 'E' || hex_code[0] == 'F')

@@ -44,11 +44,11 @@ TEST(manipulate_test, cursor_pos) {
   EXPECT_EQ(Fterm::cursor_pos(9, 5), "\033[9;5H");
 }
 TEST(manipulate_test, cursor_hvpos) {
-  EXPECT_EQ(Fterm::cursor_hvpos(1, 1), "\033[;f");
-  EXPECT_EQ(Fterm::cursor_hvpos(1, 2), "\033[;2f");
-  EXPECT_EQ(Fterm::cursor_hvpos(2, 1), "\033[2;f");
-  EXPECT_EQ(Fterm::cursor_hvpos(2, 2), "\033[2;2f");
-  EXPECT_EQ(Fterm::cursor_hvpos(9, 5), "\033[9;5f");
+  EXPECT_EQ(Fterm::cursorHvpos(1, 1), "\033[;f");
+  EXPECT_EQ(Fterm::cursorHvpos(1, 2), "\033[;2f");
+  EXPECT_EQ(Fterm::cursorHvpos(2, 1), "\033[2;f");
+  EXPECT_EQ(Fterm::cursorHvpos(2, 2), "\033[2;2f");
+  EXPECT_EQ(Fterm::cursorHvpos(9, 5), "\033[9;5f");
 }
 TEST(manipulate_test, clear_line) {
   EXPECT_STREQ(Fterm::clear_line_end(), "\033[K");

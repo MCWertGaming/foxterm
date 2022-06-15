@@ -1,5 +1,4 @@
 #include "manipulate.hpp"
-#include <iostream>
 #include <string>
 
 std::string Fterm::cursor_up(uint16_t rows) {
@@ -67,7 +66,7 @@ std::string Fterm::scroll_down(uint16_t pages) {
     return "\033[T";
   return "\033[" + std::to_string(pages) + 'T';
 }
-std::string Fterm::cursor_hvpos(uint16_t row, uint16_t column) {
+std::string Fterm::cursorHvpos(uint16_t, uint16_t) {
   if (row == 1 && column == 1)
     return "\033[;f";
   else if (row == 1)
@@ -85,7 +84,7 @@ const char *Fterm::cursor_hide() { return "\033[?25l"; }
 const char *Fterm::cursor_show() { return "\033[?25h"; }
 const char *Fterm::enable_alternative_buffer() { return "\033[?1049h"; }
 const char *Fterm::disable_alternative_buffer() { return "\033[?1049l"; }
-const char *Fterm::enable_backet_paste() { return "\033[?2004h"; }
+const char *Fterm::enable_bracket_paste() { return "\033[?2004h"; }
 const char *Fterm::disable_bracket_paste() { return "\033[?2004l"; }
 
 // std::string Fterm::device_status_report();
